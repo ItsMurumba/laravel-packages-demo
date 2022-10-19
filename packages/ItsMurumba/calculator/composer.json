@@ -1,0 +1,19 @@
+{
+    "name": "itsmurumba/calculator",
+    "description": "This demo package will do some calculations",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Itsmurumba\\Calculator\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "ItsMurumba",
+            "email": "kevmurumba@gmail.com"
+        }
+    ],
+    "keywords": ["laravel", "calculator"],
+    "minimum-stability": "dev",
+    "require": {}
+}
