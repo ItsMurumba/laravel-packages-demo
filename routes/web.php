@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('zettatel', [ZettatelController::class, 'sendSmsBybatch']);
+Route::post('zettatel', [ZettatelController::class, 'sendSmsByFile']);

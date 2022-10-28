@@ -27,7 +27,8 @@
             "Database\\Seeders\\": "database/seeders/",
             "Itsmurumba\\Calculator\\": "packages/ItsMurumba/calculator/src",
             "Itsmurumba\\Inspire\\": "packages/ItsMurumba/inspire/src/",
-            "Itsmurumba\\Zettatel\\": "packages/Itsmurumba/laravel-zettatel/src/"
+            "Itsmurumba\\Zettatel\\": "packages/Itsmurumba/laravel-zettatel/src/",
+            "Itsmurumba\\Mpesa\\": "packages/Itsmurumba/laravel-mpesa/src/"
         }
     },
     "autoload-dev": {

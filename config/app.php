@@ -188,6 +188,7 @@ return [
         Itsmurumba\Inspire\Providers\InspirationProvider::class,
         // Itsmurumba\Calculator\CalculatorServiceProvider::class,
         Itsmurumba\Zettatel\ZettatelServiceProvider::class,
+        Itsmurumba\Mpesa\MpesaServiceProvider::class,
 
         /*
          * Application Service Providers...

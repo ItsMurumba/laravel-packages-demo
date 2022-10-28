@@ -9,38 +9,39 @@ use Illuminate\Support\Facades\Http;
 class ZettatelController extends Controller
 {
 
-    public function sendSmsBybatch(){
+    public function sendSmsByBatch(){
         $zettatel = new Zettatel();
 
-        $data['mobile'] = '254720310436,254702821537';
-        $data['msg'] = 'Hello World';
+        // $data['mobile'] = '254720310436,254702821537';
+        $data['mobile'] = '254720310436';
+        $data['msg'] = 'Hello World from Batch';
 
         $response = $zettatel->sendSmsBatch($data);
 
         return $response;
+    }
 
+    public function sendSmsByGroup(){
+        $zettatel = new Zettatel();
 
-        $data = array_filter([
-            "userid" => 'itsmurumbatest',
-            "password" => '6CZQS8RN',
-            "sendMethod" => "quick",
-            "mobile" => '254720310436',
-            "msg" => 'Hello World',
-            "senderid" => 'Zettatel',
-            "msgType" => "text",
-            "duplicatecheck" => "true",
-            "output" => "json"
-        ]);
+        $data['groupIds'] = '271,272';
+        $data['msg'] = 'Hello World From Groups';
 
-        $response = Http::withHeaders([
-            'apikey' => '515fcd9839474bf84c8d58922eb2a2cec52db398',
-            'content-type'  => 'application/x-www-form-urlencoded',
-            'cache-control' => 'no-cache'
-        ])->post(
-            'https://portal.zettatel.com/SMSApi/send',
-            $data
-        );
+        $response = $zettatel->sendSmsGroup($data);
 
         return $response;
     }
+
+    public function sendSmsByFile(Request $request){
+        $zettatel = new Zettatel();
+
+        $data['filePath'] = $request->file('file');
+        $data['msg'] = 'Hello World From Files. Team Zettatel';
+
+        $response = $zettatel->sendSmsFile($data);
+
+        return $response;
+    }
+
+
 }
